@@ -3,7 +3,8 @@ import { Heading } from "./common/components";
 import type { Article } from "./types";
 
 async function getArticles() {
-  const res = await fetch("/api/articles", {
+  const url = new URL("/api/articles", window.location.origin);
+  const res = await fetch(url, {
     cache: "no-store",
   });
 
