@@ -7,9 +7,9 @@ async function getArticles() {
     cache: "no-store",
   });
 
-  // if (!res.ok) {
-  //   throw new Error("Failed to fetch articles");
-  // }
+  if (!res.ok) {
+    throw new Error("Failed to fetch articles");
+  }
 
   const data = await res.json();
   return data.articles as Article[];
