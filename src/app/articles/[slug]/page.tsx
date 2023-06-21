@@ -8,7 +8,7 @@ import LoadingComments from "./LoadingComments";
 import { Metadata, ResolvingMetadata } from "next";
 
 const getArticle = async (slug: string) => {
-  const res = await fetch(`http://127.0.0.1:3000/api/articles/${slug}`, {
+  const res = await fetch(`https://study-react-4i2njs8k3-taishi0514.vercel.app/api/articles/${slug}`, {
     next: { revalidate: 60 },
   });
 
@@ -40,7 +40,7 @@ export async function generateMetadata({
 
 const getComments = async (slug: string) => {
   const res = await fetch(
-    `http://127.0.0.1:3000/api/articles/${slug}/comments`,
+    `https://study-react-4i2njs8k3-taishi0514.vercel.app/api/articles/${slug}/comments`,
     {
       cache: "no-store",
     }
