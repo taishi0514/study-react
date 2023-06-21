@@ -3,7 +3,7 @@ import { Heading } from "./common/components";
 import type { Article } from "./types";
 
 async function getArticles() {
-  const res = await fetch("https://study-react-4i2njs8k3-taishi0514.vercel.app/api/articles", {
+  const res = await fetch("https://study-react-tau-woad.vercel.app/api/articles", {
     cache: "no-store",
   });
 
